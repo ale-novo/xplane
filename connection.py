@@ -4,7 +4,6 @@ from __future__ import print_function
 from time import *
 
 from xplane import *
-from utils import *
 
 import sys
 import os
@@ -37,7 +36,6 @@ class xplane_connection:
         else:
             del self.xp
 
-    #@timeit
     def get_dataref(self):
         try:
             values = self.xp.GetValues()
@@ -64,4 +62,3 @@ class xplane_connection:
     def write_dataref(self, dataref, value, vtype='float'):
         if dataref is not None and value is not None:
             self.xp.WriteDataRef(dataref, value, vtype)
-
